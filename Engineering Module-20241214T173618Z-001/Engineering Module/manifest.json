@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Fraud Fence",
+  "version": "0.1",
+  "description":"Protect yourself from online fraud with FRAUD FENCE-A browser extension that enhances your browsing security.",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "icons": { 
+        "16": "fraudfence.png",
+        "48": "fraudfence.png",
+        "128": "fraudfence.png" 
+   },
+  "background": {
+        "scripts": ["background.js"]
+   },
+  "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": ["jquery-3.1.1.min.js","content.js"]
+      }
+   ]
+   
+   
+  
+}
